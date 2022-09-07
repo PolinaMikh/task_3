@@ -2,7 +2,6 @@ import socket
 import sys
 import threading
 
-
 def parser_file(file):
     global start, end, info
     with open(file) as f:
@@ -10,7 +9,6 @@ def parser_file(file):
     info = info.split("\n")
     start = int(info[0])
     end = int(info[1])
-
 
 def tcp_scanner(ip, port):
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -31,7 +29,6 @@ def tcp_scanner(ip, port):
     except socket.error:
         print("Server not responding")
         sys.exit()
-
 
 if __name__ == '__main__':
     start = 0
